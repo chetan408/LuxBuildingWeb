@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
         body {
             background-color: #f8f9fa; 
-			background-image: url("images/img2.png");
+            background-image: url("images/img2.png");
+            background-size: cover;
+            background-position: center;
         }
         .contact-container {
             max-width: 600px;
@@ -21,9 +26,18 @@
     </style>
 </head>
 <body>
+    <div id="navbar"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Error fetching navbar:', error));
+  </script>
     <div class="contact-container">
         <h2 class="text-center">Contact Us</h2>
-        <form>
+        <form id="contactForm">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
@@ -39,5 +53,38 @@
             <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="successModalLabel">Thank You!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Your message has been submitted. We will contact you soon!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission and show the modal
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form from reloading the page
+
+            // Reset form fields (optional)
+            document.getElementById("contactForm").reset();
+
+            // Show the Bootstrap modal
+            $('#successModal').modal('show');
+        });
+    </script>
 </body>
 </html>

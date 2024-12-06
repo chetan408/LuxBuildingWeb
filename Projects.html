@@ -68,6 +68,15 @@
 </head>
 
 <body>
+    <div id="navbar"></div>
+<script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    })
+    .catch(error => console.error('Error fetching navbar:', error));
+</script>
     <div class="container mt-5">
         <h2 class="text-center text-dark mb-4"><span class="text-danger">O</span>ur <span class="text-danger">L</span>uxurious <span class="text-danger">P</span>rojects</h2>
         <div class="grid-container">

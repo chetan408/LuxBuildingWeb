@@ -48,6 +48,15 @@
 </head>
 
 <body>
+    <div id="navbar"></div>
+<script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    })
+    .catch(error => console.error('Error fetching navbar:', error));
+</script>
     <div class="container mt-5 bg-light rounded p-4">
         <h2 class="text-center text-dark"><span class="text-danger">O</span >ur <span class="text-danger">S</span >ervices</h2>
         <div class="row mt-4 gy-4">
