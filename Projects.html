@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Luxurious Building Projects</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url("images/img2.png");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .project-card:hover img {
+            opacity: 0.8;
+        }
+
+        .project-card .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .project-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center text-dark mb-4"><span class="text-danger">O</span>ur <span class="text-danger">L</span>uxurious <span class="text-danger">P</span>rojects</h2>
+        <div class="grid-container">
+            <div class="project-card">
+                <img src="images\homebg.jpg" alt="Modern Skyscraper">
+                <div class="card-overlay">
+                    <div>
+                        <h5 class="mb-2">Modern Skyscraper</h5>
+                        <p>A contemporary skyscraper with modern architectural design.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images\ourproject2.jpg" alt="Residential Tower">
+                <div class="card-overlay">
+                    <div>
+                        <h5 class="mb-2">Residential Tower</h5>
+                        <p>High-rise residential tower featuring luxury living spaces.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images\ourproject3.jpg" alt="Corporate Office">
+                <div class="card-overlay">
+                    <div>
+                        <h5 class="mb-2">Corporate Office</h5>
+                        <p>State-of-the-art corporate office designed for modern businesses.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images\ourproject4.jpg" alt="Luxury Apartments">
+                <div class="card-overlay">
+                    <div>
+                        <h5 class="mb-2">Luxury Apartments</h5>
+                        <p>Elegant and modern apartments with top-notch amenities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images\ourproject5.jpg" alt="Shopping Mall">
+                <div class="card-overlay">
+                    <div>
+                        <h5 class="mb-2">Shopping Mall</h5>
+                        <p>Expansive shopping mall with cutting-edge facilities and luxury brands.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images\ourproject6.jpg" alt="Eco-Friendly Villas">
+                <div class="card-overlay">
+                    <div>
+                        <h5 class="mb-2">Eco-Friendly Villas</h5>
+                        <p>Sustainable villas designed for green living in luxury.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images\ourproject7.jpg" alt="Resort Complex">
+                <div class="card-overlay">
+                    <div>
+                        <h5 class="mb-2">Resort Complex</h5>
+                        <p>A luxury resort with breathtaking views and unparalleled services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images\ourproject8.jpg" alt="Urban Mixed-Use Development">
+                <div class="card-overlay">
+                    <div>
+                        <h5 class="mb-2">Urban Mixed-Use Development</h5>
+                        <p>An urban center combining residential, retail, and commercial spaces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
